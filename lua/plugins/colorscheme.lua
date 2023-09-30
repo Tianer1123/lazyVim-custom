@@ -16,8 +16,13 @@ return {
   --   },
   -- },
 
+-- colorscheme tokyonight-night
+-- colorscheme tokyonight-storm
+-- colorscheme tokyonight-day
+-- colorscheme tokyonight-moon
+
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "moon" },
+    opts = { style = "day" },
     -- opts = { style = "night" },
 }
