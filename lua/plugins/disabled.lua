@@ -23,5 +23,5 @@ return {
   { "ggandor/leap.nvim", enabled = false },
   { "tpope/vim-repeat", enabled = false },
   { "echasnovski/mini.files", enabled = false },
-  { "nvim-neotest/neotest", enabled = false },
+  -- { "nvim-neotest/neotest", enabled = false },
 }
