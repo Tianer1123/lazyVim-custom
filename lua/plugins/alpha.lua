@@ -4,23 +4,32 @@ return {
   opts = function()
     local dashboard = require("alpha.themes.dashboard")
     local logo = [[
-         ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
-         ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
-         ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
-         ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         
-         ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║
-         ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝
+ ██████████ ██     ██     ████     ██ ████████ ███████  
+░░░░░██░░░ ░██    ████   ░██░██   ░██░██░░░░░ ░██░░░░██ 
+    ░██    ░██   ██░░██  ░██░░██  ░██░██      ░██   ░██ 
+    ░██    ░██  ██  ░░██ ░██ ░░██ ░██░███████ ░███████  
+    ░██    ░██ ██████████░██  ░░██░██░██░░░░  ░██░░░██  
+    ░██    ░██░██░░░░░░██░██   ░░████░██      ░██  ░░██ 
+    ░██    ░██░██     ░██░██    ░░███░████████░██   ░░██
+    ░░     ░░ ░░      ░░ ░░      ░░░ ░░░░░░░░ ░░     ░░  
     ]]
 
     dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.buttons.val = {
-      dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
-      dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
-      dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
-      dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
-      dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
-      dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
-      dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+      -- dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
+      -- dashboard.button("n", " " .. " New file", ":ene <BAR> startinsert <CR>"),
+      -- dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
+      -- dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
+      -- dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
+      -- dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),
+      -- dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+      dashboard.button("f", " " .. " 查找文件", ":Telescope find_files <CR>"),
+      dashboard.button("n", " " .. " 创建新文件", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("r", " " .. " 最近打开的文件", ":Telescope oldfiles <CR>"),
+      dashboard.button("g", " " .. " 查找文本", ":Telescope live_grep <CR>"),
+      dashboard.button("c", " " .. " 打开配置文件", ":e $MYVIMRC <CR>"),
+      dashboard.button("l", "󰒲 " .. " 打开Lazy", ":Lazy<CR>"),
+      dashboard.button("q", " " .. " 退出!", ":qa<CR>"),
     }
     for _, button in ipairs(dashboard.section.buttons.val) do
       button.opts.hl = "AlphaButtons"
