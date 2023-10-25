@@ -8,4 +8,5 @@ opt.shiftwidth = 4
 opt.tabstop = 4
 vim.g.autoformat = false
 
+vim.opt.mouse = ""
 

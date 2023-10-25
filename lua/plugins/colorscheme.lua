@@ -1,13 +1,13 @@
 return {
-  -- -- add gruvbox
-  -- {
-  --   "ellisonleao/gruvbox.nvim",
-  --   opts = {
-  --     contrast = "hard",
-  --     -- transparent_mode = true,
-  --   },
-  -- },
-  --
+  -- add gruvbox
+  {
+    "ellisonleao/gruvbox.nvim",
+    opts = {
+      contrast = "hard",
+      -- transparent_mode = true,
+    },
+  },
+
   -- -- Configure LazyVim to load gruvbox
   -- {
   --   "LazyVim/LazyVim",
@@ -31,9 +31,9 @@ return {
         terminal_colors = true,
         styles = {
             comments = { italic = true },
-            keyworkds = { italic = true },
-            -- keyworkds = { italic = true, bold = true },
-            -- functions = { bold = true },
+            -- keyworkds = { italic = true },
+            keyworkds = { italic = true, bold = true },
+            functions = { bold = true },
             -- variables = { bold = true },
         }
     },
